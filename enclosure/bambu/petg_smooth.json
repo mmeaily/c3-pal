@@ -1,0 +1,49 @@
+{
+  "_readme": "Bambu Studio settings for the c3-pal bar in gray Bambu PETG Basic on the A1's textured PEI plate, with the outside as smooth as possible. make_3mf.py starts from a1_project_settings.config (the user's A1 project settings, copied from the owala boots project), applies the system process preset PROCESS_PRESET, makes filament 1 the system preset FILAMENT_PRESET (both read from the Bambu Studio install), then 'print' and 'filament' below on top. Keys starting with '_' are notes. Values are written as Bambu Studio stores them (strings; lists for per-extruder keys).",
+
+  "PROCESS_PRESET": "0.12mm High Quality @BBL A1",
+  "_PROCESS_PRESET": "Thin layers make the side walls smooth; the High Quality presets also slow the outer wall and its acceleration, which is what keeps it free of ringing",
+  "FILAMENT_PRESET": "Bambu PETG Basic @BBL A1",
+  "BED_TYPE": "Textured PEI Plate",
+  "_BED_TYPE": "The front (screen side) prints face down and takes the plate's even matte grain. PETG releases from textured PEI on its own once cool; no glue",
+
+  "print": {
+    "_note": "Process settings on top of PROCESS_PRESET, for the look of the outside.",
+
+    "seam_position": "aligned",
+    "_seam_position": "Seams line up in one place, which on this rounded box is a corner",
+    "seam_slope_type": "external",
+    "_seam_slope_type": "Scarf seam on the outer wall: the start and end of each loop overlap on a slope, so there is no seam bump",
+    "seam_slope_conditional": "0",
+    "_seam_slope_conditional": "Scarf every outer loop, not only where the slicer can't hide the seam in a corner",
+    "precise_outer_wall": "1",
+    "_precise_outer_wall": "Keeps the outer wall at its true position, so the sides are flat and the parts fit",
+    "wall_sequence": "inner wall/outer wall",
+    "_wall_sequence": "Inner walls first, so the outer wall is laid against them: smoothest outside",
+    "wall_loops": "3",
+    "_wall_loops": "3 walls fill the 1.6 side walls, so no infill pattern shows through the gray",
+    "elefant_foot_compensation": "0.15",
+    "_elefant_foot_compensation": "PETG squashes out on the first layer; this keeps the front's edges crisp",
+    "reduce_crossing_wall": "1",
+    "_reduce_crossing_wall": "Travel round inside the walls instead of across them: PETG strings and leaves blobs on the outside",
+    "sparse_infill_pattern": "gyroid",
+    "sparse_infill_density": "20%",
+    "initial_layer_speed": ["30"],
+    "initial_layer_infill_speed": ["40"],
+    "_initial_layer_speed": "Slow first layer (the preset's 50 / 105 is fast for PETG): more time to bond to the plate (2026-11-15: first print didn't stick)",
+    "brim_type": "no_brim",
+    "_brim_type": "No brim to trim off the edges; the parts are flat and stick well",
+    "enable_support": "0"
+  },
+
+  "filament": {
+    "_note": "Filament 1, on top of the PETG Basic preset (its fan and retraction are kept; the first-layer temperatures are raised below).",
+    "textured_plate_temp_initial_layer": "80",
+    "textured_plate_temp": "75",
+    "_textured_plate_temp": "Preset 70 / 70. Hotter plate for the first layer, a little hotter after, so PETG grips textured PEI (2026-11-15: first print didn't stick)",
+    "nozzle_temperature_initial_layer": "250",
+    "_nozzle_temperature_initial_layer": "Preset 245; a bit hotter so the first layer flows into the plate's texture",
+    "filament_z_hop": "0.4",
+    "_filament_z_hop": "Lift on travel so the nozzle doesn't drag PETG across the top"
+  }
+}

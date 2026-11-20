@@ -1,0 +1,168 @@
+{
+  "_readme": "c3-pal enclosure settings. All lengths in mm. Keys starting with '_' are notes and are ignored. Run: venv\\Scripts\\python generate.py",
+
+  "c3": {
+    "_note": "ESP32-C3 0.42in OLED board (purple, 2 buttons at the far end, USB-C at the near end, no pin headers). It lies face down behind the window in the front. Sizes from the listing drawing (25 x 20.5, header rows 17.78 apart) and the photo; the ones marked 'photo' or 'estimate' are not measured - check them with the fit test.",
+    "C3_LENGTH": 25.0,
+    "C3_WIDTH": 20.5,
+    "C3_PCB": 1.0,
+    "_C3_PCB": "PCB thickness (photo)",
+    "C3_UNDER": 1.2,
+    "_C3_UNDER": "Tallest part on the underside (ESP32-C3 chip, crystal, regulator) (estimate)",
+    "C3_OLED_HEIGHT": 1.6,
+    "_C3_OLED_HEIGHT": "Top of the screen glass above the PCB's component side (estimate)",
+    "C3_USB_OVERHANG": 2.4,
+    "_C3_USB_OVERHANG": "How far the USB-C receptacle's face sticks out past the PCB's near edge (photo)",
+    "C3_USB_WIDTH": 8.94,
+    "C3_USB_HEIGHT": 3.2,
+    "_C3_USB_HEIGHT": "Receptacle height; it sits on the component side, centred across the board. It is the tallest part on that side, so it sets how far the board sits from the front",
+    "C3_BUTTON_FROM_END": 1.5,
+    "_C3_BUTTON_FROM_END": "Button centres from the PCB's far edge (drawing)",
+    "C3_BUTTON_FROM_SIDE": 3.8,
+    "_C3_BUTTON_FROM_SIDE": "Button centres from the PCB's long edges (drawing)",
+    "C3_BUTTON_HEIGHT": 2.0,
+    "_C3_BUTTON_HEIGHT": "Top of the button above the PCB's component side (estimate)",
+    "C3_BOOT_SIDE": "right",
+    "_C3_BOOT_SIDE": "Which button is BOOT, seen from the screen side with the USB-C at the bottom (photo: the BOOT label is by the right one)",
+    "C3_SCREEN_FROM_END": 10.4,
+    "_C3_SCREEN_FROM_END": "Centre of the lit area from the PCB's far edge (photo)",
+    "C3_SCREEN_OFFSET": 0.0,
+    "_C3_SCREEN_OFFSET": "Centre of the lit area from the board's centre line, + = to the left seen from the screen side with the USB-C at the bottom",
+    "C3_SCREEN_WIDTH": 9.6,
+    "_C3_SCREEN_WIDTH": "Lit area, across the board (72 px)",
+    "C3_SCREEN_HEIGHT": 5.4,
+    "_C3_SCREEN_HEIGHT": "Lit area, along the board (40 px)",
+    "C3_GLASS_FROM_END": 6.4,
+    "_C3_GLASS_FROM_END": "Screen glass: its far edge from the PCB's far edge (photo)",
+    "C3_GLASS_LENGTH": 12.4,
+    "C3_GLASS_WIDTH": 12.4
+  },
+
+  "charger": {
+    "_note": "Mini TP4056 USB-C charger, 20 x 15 mm, 5 mm tall with the USB-C (listing). It lies on the floor at the top end, components towards the back, USB-C out of the top end wall.",
+    "TP_LENGTH": 20.0,
+    "TP_WIDTH": 15.0,
+    "TP_PCB": 1.0,
+    "TP_PARTS": 1.6,
+    "_TP_PARTS": "Tallest part other than the USB-C, above the PCB",
+    "TP_USB_OVERHANG": 0.6,
+    "_TP_USB_OVERHANG": "Receptacle face past the PCB's edge (photo)",
+    "TP_USB_WIDTH": 8.94,
+    "TP_USB_HEIGHT": 3.2,
+    "TP_USB_OFFSET": 2.8,
+    "_TP_USB_OFFSET": "Receptacle centre from the board's centre line (it sits towards one long edge; photo). The board is placed so the receptacle is on the bar's centre line"
+  },
+
+  "battery": {
+    "_note": "LP702030 350 mAh LiPo with protection board (PCM), maximum sizes from its datasheet: 32.0 long, 20.5 wide, 7.3 thick. Lies on the floor between the C3 and the screw, PCM end (wires) towards the TP4056. Its 50 mm leads end in a JST-PHR-02 plug; the TP4056 has solder pads, so cut the plug off and solder the leads to B+ / B-.",
+    "BATT_LENGTH": 32.0,
+    "BATT_WIDTH": 20.5,
+    "BATT_THICKNESS": 7.3
+  },
+
+  "case": {
+    "_note": "A flat bar worn upright on the side of a bottle, PRG end down. Front: tub, printed front face down, with the window, the BOOT tab and the strap ears. Back: lid, a flat plate in a pocket at the top of the walls, printed flat on its back; the side walls stand past it as rails that rest on the bottle. The lid's bottom edge tucks under two lips at the PRG end; one M3 screw from the front, between the battery and the TP4056, into a nut in the lid holds the rest.",
+    "WALL": 1.6,
+    "PORT_WALL": 1.2,
+    "_PORT_WALL": "End walls with the USB-C ports; thin so the plugs reach the receptacles",
+    "FLOOR": 1.2,
+    "_FLOOR": "The front face, with the window",
+    "LID": 1.4,
+    "CORNER_RADIUS": 1.5,
+    "CLEARANCE": 0.4,
+    "_CLEARANCE": "Gap round each part, per side",
+    "FRONT_GAP": 0.2,
+    "_FRONT_GAP": "Gap between the C3's USB-C receptacle (its tallest part on the screen side) and the inside of the front",
+    "WIRE_GAP": 1.0,
+    "_WIRE_GAP": "Room over the battery for the wires from the TP4056 to the C3",
+    "PORT_INSET": 0.4,
+    "_PORT_INSET": "How far each receptacle's face goes into its end wall",
+    "PORT_CLEARANCE": 0.5,
+    "_PORT_CLEARANCE": "Port opening bigger than the receptacle, on width and height",
+    "LEDGE": 0.8,
+    "_LEDGE": "How far the ribs along the long walls reach under the C3's edges (they hold its screen side off the front)",
+    "SEAT": 0.6,
+    "_SEAT": "The lid sits in a pocket this far into the walls; above it the side walls go on as the rails",
+    "LIP": 0.8,
+    "_LIP": "How far the two lips at the PRG end reach over the lid's bottom edge (the lid slides under them, then the screw goes in)",
+    "LIP_THICKNESS": 0.8,
+    "PEG": 1.2,
+    "_PEG": "Square pegs on the lid that press the C3 onto its ribs"
+  },
+
+  "mount": {
+    "_note": "The side walls stand past the back as rails that rest on the bottle; two one-wrap hook-and-loop (velcro) straps go round the bottle and through slots in ears at the front's edges. The straps pull the front towards the bottle, so the lid is squeezed between them.",
+    "BOTTLE_MIN_DIAMETER": 68.0,
+    "_BOTTLE_MIN_DIAMETER": "Smallest bottle; the rails are tall enough that it doesn't touch the lid between them, and the end walls are curved down to it (Owala FreeSip Sway 30 oz is about 70)",
+    "BOTTLE_MAX_DIAMETER": 80.0,
+    "_BOTTLE_MAX_DIAMETER": "Largest bottle, shown in the preview and checked for fit",
+    "RAIL_CLEARANCE": 0.3,
+    "_RAIL_CLEARANCE": "Gap between the smallest bottle and the lid between the rails",
+    "STRAP_WIDTH": 16.0,
+    "_STRAP_WIDTH": "Strap width the slots take (one-wrap velcro cable straps are commonly 12-20)",
+    "STRAP_SLOT": 3.0,
+    "_STRAP_SLOT": "Slot gap, for the strap's thickness doubled over",
+    "STRAP_INSET": 14.0,
+    "_STRAP_INSET": "Strap centres from the bar's ends",
+    "EAR_RIM": 2.0,
+    "_EAR_RIM": "Plastic round each strap slot",
+    "EAR_THICKNESS": 2.4
+  },
+
+  "screen": {
+    "WINDOW_MARGIN": 0.5,
+    "_WINDOW_MARGIN": "Window bigger than the lit area, per side",
+    "WINDOW_CHAMFER": 0.8,
+    "_WINDOW_CHAMFER": "45 degree bevel round the outside of the window",
+    "BEZEL_MARGIN": 1.0,
+    "_BEZEL_MARGIN": "Block inside the front round the window, down to just above the glass, so the window isn't a deep well",
+    "BEZEL_GAP": 0.3
+  },
+
+  "buttons": {
+    "_note": "BOOT is pressed through a flexing tab in the front with a nub behind it. RST gets a pin hole (paperclip) for download mode.",
+    "FLEX_WIDTH": 3.6,
+    "FLEX_LENGTH": 6.0,
+    "FLEX_SLOT": 0.6,
+    "FLEX_THICKNESS": 0.8,
+    "NUB_DIAMETER": 2.4,
+    "NUB_GAP": 0.2,
+    "_NUB_GAP": "Gap between the nub and the BOOT button at rest",
+    "RST_HOLE": 1.6
+  },
+
+  "screws": {
+    "_note": "One M3 socket head screw from the front, with a washer under the head (counterbored), through a post between the battery and the TP4056, into an M3 nut dropped into a hex pocket that opens at the back of the lid. The generator picks the longest length that stays inside the lid.",
+    "SCREW_LENGTHS": [6, 8, 10, 16, 20],
+    "SCREW_HEAD_DIAMETER": 5.5,
+    "SCREW_HEAD_HEIGHT": 3.0,
+    "WASHER_DIAMETER": 7.0,
+    "WASHER_THICKNESS": 0.5,
+    "HEAD_CLEARANCE": 0.5,
+    "_HEAD_CLEARANCE": "Counterbore bigger than the washer, on the diameter",
+    "SCREW_HOLE": 3.4,
+    "_SCREW_HOLE": "Clearance hole for the screw",
+    "NUT_FLATS": 5.5,
+    "NUT_THICKNESS": 2.4,
+    "NUT_FIT": 0.15,
+    "_NUT_FIT": "Hex pocket bigger than the nut across the flats",
+    "NUT_PAST": 1.0,
+    "_NUT_PAST": "How far the screw comes out past the nut",
+    "BOSS_WALL": 1.0,
+    "_BOSS_WALL": "Plastic round the nut pocket's corners, and under the nut"
+  },
+
+  "labels": {
+    "_note": "PRG and PWR engraved in the front, by their ends.",
+    "LABEL_SIZE": 3.0,
+    "LABEL_DEPTH": 0.4,
+    "LABEL_FONT": "Arial"
+  },
+
+  "output": {
+    "PREVIEW": true,
+    "CHECK_FIT": true,
+    "PLA_DENSITY": 1.24,
+    "_PLA_DENSITY": "g/cm3, for the weight estimate (solid)"
+  }
+}

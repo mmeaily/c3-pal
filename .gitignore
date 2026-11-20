@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+*.pyc
+debug.log
+CLAUDE.md
+.pio/
+enclosure/reference/
+# Full-resolution boot STL (~100 MB) is attached to GitHub Releases
+boot/c3pal_boot.stl

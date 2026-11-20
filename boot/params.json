@@ -1,0 +1,217 @@
+{
+  "_readme": "c3-pal boot settings. All lengths in mm. Keys starting with '_' are notes and are ignored. Run: ..\\enclosure\\venv\\Scripts\\python generate.py",
+
+  "bottle": {
+    "_note": "Owala FreeSip Sway 30 oz, as in the owala boots project (../../owala-boots/bottles/owala_freesip_sway_30oz). ESTIMATES, but the plain TPU boot built from them fits (2026-11-06).",
+    "BASE_DIAMETER": 70.0,
+    "_BASE_DIAMETER": "Side of the bottle just above the rounded bottom edge",
+    "UPPER_DIAMETER": 71.5,
+    "_UPPER_DIAMETER": "Side of the bottle at UPPER_HEIGHT above its bottom",
+    "UPPER_HEIGHT": 40.0,
+    "CORNER_RADIUS": 5.0,
+    "_CORNER_RADIUS": "Rounded edge between the bottom and the side"
+  },
+
+  "boot": {
+    "_note": "TPU 90A cup the bottle pushes down into, as in the owala boots project, with the AirTag pocket in the floor at the back, the pod pocket in the floor at the front and a frame round the pod's tower on the outside. Printed floor on the bed.",
+    "WALL": 2.0,
+    "WALL_HEIGHT": 32.0,
+    "_WALL_HEIGHT": "How far up the bottle's side the boot reaches, from the bottle's bottom (32: 10 of wall over the tower for a stiff back strap; 37.5 with an arch under it was too tall)",
+    "FIT_SQUEEZE": 0.6,
+    "_FIT_SQUEEZE": "Inside smaller than the bottle, on the diameter (0.6 grips well on the plain boot)",
+    "FLOOR_UNDER": 1.0,
+    "_FLOOR_UNDER": "TPU under the pod",
+    "BOTTOM_ROUND": 3.0,
+    "TOP_ROUND": 0.8,
+    "DRAIN_HOLES": 8,
+    "_DRAIN_HOLES": "Holes spread round the floor near the wall; the ones that would hit a pocket are left out",
+    "DRAIN_DIAMETER": 3.0,
+    "FRAME": 2.4,
+    "_FRAME": "TPU round the sides of the pod's tower (stiff enough to carry the boot's pull into the strap)",
+    "FRAME_LIP": 1.5,
+    "_FRAME_LIP": "How far the frame reaches over the edges of the tower's face; holds the pod in",
+    "FRAME_FRONT": 1.2,
+    "_FRAME_FRONT": "Thickness of the frame's lips in front of the face",
+    "POD_FIT": -0.3,
+    "_POD_FIT": "Pod pocket bigger than the pod, on the width and length. Below 0: smaller, so the TPU grips the pod",
+    "STRAP": 2.0,
+    "_STRAP": "TPU strap across the front of the tower's face above the window, joining the frame's sides: closes the boot's ring, which is open where the tower goes through the wall (the bottle stretching it pulled the frame's sides apart into a V on the first print). The pod slides down behind it",
+    "BACK_STRAP": 3.0,
+    "_BACK_STRAP": "Least height of the boot's wall left whole over the tower's top (bottle side), flat underneath (a bridge over the tower): closes the ring there too. The pod goes in from underneath it, stretching the TPU",
+    "STRAP_GAP": 1.0,
+    "_STRAP_GAP": "Between the strap's underside (45 degrees each way from the middle, so it prints) and the screen's bezel"
+  },
+
+  "airtag": {
+    "_note": "Apple AirTag, 31.9 x 8.0. Pocket, lip, holes and bumps as on the owala boot (tested 2026-11-08), moved off centre to the back of the floor.",
+    "AIRTAG_DIAMETER": 31.9,
+    "AIRTAG_THICKNESS": 8.0,
+    "AIRTAG_CLEARANCE": -0.6,
+    "AIRTAG_HEADROOM": 0.0,
+    "LIP": 1.6,
+    "LIP_HEIGHT": 1.2,
+    "PUSH_HOLE_DIAMETER": 12.0,
+    "SOUND_HOLES": 8,
+    "SOUND_HOLE_DIAMETER": 2.5,
+    "SPRING_BUMPS": 4,
+    "SPRING_HEIGHT": 0.4,
+    "SPRING_DIAMETER": 2.5,
+    "AIRTAG_EDGE": 1.5,
+    "_AIRTAG_EDGE": "TPU between the AirTag pocket and the outside, and between it and the pod pocket"
+  },
+
+  "c3": {
+    "_note": "ESP32-C3 0.42in OLED board, as in ../enclosure/params.json (sizes marked there as photo or estimate are not measured). It stands upright in the pod's tower, screen out, USB-C at the top (PRG), buttons at the bottom.",
+    "C3_LENGTH": 25.0,
+    "C3_WIDTH": 20.5,
+    "C3_PCB": 1.0,
+    "C3_UNDER": 1.2,
+    "C3_OLED_HEIGHT": 1.6,
+    "C3_USB_OVERHANG": 2.4,
+    "C3_USB_WIDTH": 8.94,
+    "C3_USB_HEIGHT": 3.2,
+    "C3_BUTTON_FROM_END": 1.5,
+    "C3_BUTTON_FROM_SIDE": 3.8,
+    "C3_BUTTON_HEIGHT": 2.0,
+    "C3_BOOT_SIDE": "right",
+    "_C3_BOOT_SIDE": "Which button is BOOT, seen from the screen side with the USB-C at the bottom (as in the enclosure). Upside down in the tower, so it ends up on the left",
+    "C3_SCREEN_FROM_END": 10.4,
+    "C3_SCREEN_OFFSET": 0.0,
+    "C3_SCREEN_WIDTH": 9.6,
+    "C3_SCREEN_HEIGHT": 5.4,
+    "C3_GLASS_FROM_END": 6.4,
+    "C3_GLASS_LENGTH": 12.4,
+    "C3_GLASS_WIDTH": 12.4
+  },
+
+  "charger": {
+    "_note": "Mini TP4056 USB-C charger, as in ../enclosure/params.json. Lies on the pod's floor, parts up, USB-C out of the tower's face at the bottom (PWR).",
+    "TP_LENGTH": 20.0,
+    "TP_WIDTH": 15.0,
+    "TP_PCB": 1.0,
+    "TP_PARTS": 1.6,
+    "TP_USB_OVERHANG": 0.6,
+    "TP_USB_WIDTH": 8.94,
+    "TP_USB_HEIGHT": 3.2,
+    "TP_USB_OFFSET": 2.8,
+    "_TP_USB_OFFSET": "Receptacle centre from the board's centre line (photo)"
+  },
+
+  "battery": {
+    "_note": "LP702030 350 mAh, datasheet maxima. Lies on the pod's floor across the boot, between the AirTag and the TP4056.",
+    "BATT_LENGTH": 32.0,
+    "BATT_WIDTH": 20.5,
+    "BATT_THICKNESS": 7.3
+  },
+
+  "pod": {
+    "_note": "PETG pod in the boot's floor: a tray for the battery and the TP4056 and, at the front, a tower standing up outside the bottle for the C3. The lid is an L: a plate over the tray (the bottle stands on it) and a wall closing the tower on the bottle side. It goes straight down; the wall drops into grooves in the tower's side walls (full height, so button pushes on the C3 are taken by the tower) and closes the tower's top; two clips and two M2 screws hold it on the tray.",
+    "POD_WALL": 1.2,
+    "POD_FLOOR": 1.0,
+    "FACE": 1.2,
+    "_FACE": "Tower's front, with the window, the BOOT tab, the RST hole and the PWR port",
+    "TOWER_WALL": 2.0,
+    "_TOWER_WALL": "Tower's side walls (the grooves for the lid's wall are cut into them)",
+    "GROOVE": 0.8,
+    "_GROOVE": "How deep the lid's wall reaches into the grooves in the tower's side walls",
+    "KEEPER": 1.2,
+    "_KEEPER": "Side wall behind each groove; takes the push of the buttons on the lid's wall",
+    "PORT_WALL": 1.2,
+    "_PORT_WALL": "Tower's top, with the PRG port",
+    "LID": 1.0,
+    "_LID": "Lid wall",
+    "PLATE": 3.2,
+    "_PLATE": "Lid plate: the M3 nuts sit in it (NUT_FLOOR + NUT_THICKNESS + NUT_RECESS); the clips hook a step in its edge",
+    "LID_GAP": 0.2,
+    "_LID_GAP": "Between the lid's wall and the bottle, at the tower's top (where the bottle is widest)",
+    "CLEARANCE": 0.4,
+    "_CLEARANCE": "Gap round each part, per side",
+    "FRONT_GAP": 0.2,
+    "_FRONT_GAP": "Between the C3's USB-C receptacle (its tallest part on the screen side) and the inside of the face",
+    "BACK_GAP": 0.3,
+    "_BACK_GAP": "Between the C3's underside parts and the lid's wall",
+    "WIRE_GAP": 0.8,
+    "_WIRE_GAP": "Room over the battery for wires",
+    "LEAD_GAP": 1.6,
+    "_LEAD_GAP": "Between the battery and the TP4056, for the battery leads and the diode",
+    "BOARD_GAP": 0.5,
+    "_BOARD_GAP": "Between the top of the TP4056's USB-C and the C3's bottom edge",
+    "PORT_INSET": 0.4,
+    "PORT_CLEARANCE": 0.5,
+    "LEDGE": 0.8,
+    "_LEDGE": "How far the ribs in the tower reach in under the C3's edges",
+    "PEG": 1.2,
+    "BOARD_LIP": 0.6,
+    "_BOARD_LIP": "How far the lips in the tower reach over the C3's back edges (they hold the board with the lid off; it snaps in past them)",
+    "BOARD_LIP_HEIGHT": 2.0,
+    "LIP_SLOT": 0.5,
+    "_LIP_SLOT": "Slots that free the tongues in the tower's side walls that carry the board lips",
+    "TAB_GAP": 1.0,
+    "_TAB_GAP": "Least gap between the PWR opening and the BOOT tab's slot; the TP4056 is moved across to get it"
+  },
+
+  "fasteners": {
+    "_note": "Two M3 socket head cap screws (ISO 4762 / DIN 912) up from under the pod, heads in counterbores in the bottom of two columns beside the battery (the boot's floor under them), into M3 hex nuts (ISO 4032) pressed into pockets in the lid plate's top (flush, the bottle stands on them); and two clips: arms on the tray's sides whose hooks snap over a step in the lid plate's edge.",
+    "SCREW_HOLE": 3.4,
+    "HEAD_DIAMETER": 5.5,
+    "HEAD_HEIGHT": 3.0,
+    "SCREW_LENGTH": 8.0,
+    "_SCREW_LENGTH": "Under the head. Chosen so the tip ends flush with the nut's top and the head is inside the pod (M3x10 would stick out under the pod, M3x6 grips less)",
+    "NUT_WIDTH": 5.5,
+    "_NUT_WIDTH": "Across flats",
+    "NUT_THICKNESS": 2.4,
+    "NUT_FIT": 0.2,
+    "_NUT_FIT": "Nut pocket bigger than the nut across flats; small enough to hold the nut pressed in",
+    "NUT_RECESS": 0.2,
+    "_NUT_RECESS": "Nut's top below the lid's top",
+    "NUT_FLOOR": 0.6,
+    "_NUT_FLOOR": "Lid plate under the nut, clamped by the screw (PLATE must be NUT_FLOOR + NUT_THICKNESS + NUT_RECESS)",
+    "BOSS_WALL": 1.2,
+    "_BOSS_WALL": "Round the nut pocket's corners and the counterbore",
+    "CLIP_WIDTH": 5.0,
+    "CLIP_THICKNESS": 1.2,
+    "CLIP_SLOT": 0.4,
+    "_CLIP_SLOT": "Between the clip's arm and the tray's side",
+    "CLIP_HOOK": 0.6,
+    "_CLIP_HOOK": "How far the hook reaches in over the lid's step (and how deep the step is)",
+    "CLIP_ROOT": 1.5,
+    "_CLIP_ROOT": "Height where the arm joins the tray, at the bottom"
+  },
+
+  "screen": {
+    "WINDOW_MARGIN": 0.5,
+    "WINDOW_CHAMFER": 0.8,
+    "BEZEL_MARGIN": 1.0,
+    "BEZEL_GAP": 0.3
+  },
+
+  "buttons": {
+    "FLEX_WIDTH": 3.6,
+    "FLEX_LENGTH": 6.0,
+    "FLEX_SLOT": 0.6,
+    "FLEX_THICKNESS": 0.8,
+    "NUB_DIAMETER": 2.4,
+    "NUB_GAP": 0.2,
+    "RST_HOLE": 1.6
+  },
+
+  "labels": {
+    "LABEL_SIZE": 3.0,
+    "LABEL_DEPTH": 0.4,
+    "LABEL_FONT": "Arial"
+  },
+
+  "plugs": {
+    "_note": "USB-C plug overmould, for checking the cables clear the boot and the bottle (a typical cable; some are bigger).",
+    "PLUG_WIDTH": 12.0,
+    "PLUG_THICKNESS": 6.5,
+    "PLUG_LENGTH": 20.0
+  },
+
+  "output": {
+    "PREVIEW": true,
+    "CHECK_FIT": true,
+    "TPU_DENSITY": 1.21,
+    "PETG_DENSITY": 1.27
+  }
+}
